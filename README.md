@@ -1,11 +1,8 @@
 [![Version](https://img.shields.io/badge/Symcon-PHPModul-red.svg)](https://www.symcon.de/service/dokumentation/entwicklerbereich/sdk-tools/sdk-php/)
 ![Version](https://img.shields.io/badge/Symcon%20Version-5.3%20%3E-blue.svg)
 [![License](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-green.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
-[![Check Style](https://github.com/Schnittcher/IPS-MQTTSync/workflows/Check%20Style/badge.svg)](https://github.com/Schnittcher/IPS-MQTTSync/actions)
-
-
-# IPS-MQTTSync
-   Dieses Modul ermöglicht es Daten aus IP-Symcon zu MQTT zu pushen oder Scripte in IP-Symcon über MQTT auszuführen.
+# IPS-MQTTBridge
+   Dieses Modul basiert auf dem IPS-MQTTSync-Modul von Kai Schnittcher https://github.com/Schnittcher ermöglicht es Daten aus IP-Symcon zu MQTT zu schreiben und empfangen, womit die Geräte für andere mqtt-Clients zur Verfügung stehen.
  
    ## Inhaltverzeichnis
    1. [Voraussetzungen](#1-voraussetzungen)
