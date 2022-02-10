@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-class MQTTSyncClientConfigurator extends IPSModule
+class MQTTBridgeClientConfigurator extends IPSModule
 {
     public function Create()
     {
@@ -22,7 +22,7 @@ class MQTTSyncClientConfigurator extends IPSModule
         $Devices = json_decode($Devices);
 
         foreach ($Devices as $Device) {
-            $instanceID = $this->getMQTTSyncClientDeviceInstance($Device->MQTTTopic);
+            $instanceID = $this->getMQTTBridgeClientDeviceInstance($Device->MQTTTopic);
 
             $tmpDevice = [];
             $tmpDevice = [
@@ -95,9 +95,9 @@ class MQTTSyncClientConfigurator extends IPSModule
         }
     }
 
-    private function getMQTTSyncClientDeviceInstance($Topic)
+    private function getMQTTBridgeClientDeviceInstance($Topic)
     {
-        $InstanceIDs = IPS_GetInstanceListByModuleID('{F6B7EB9F-7624-1026-44C1-9AF4059C26ED}'); //MQTTSyncClientDevice
+        $InstanceIDs = IPS_GetInstanceListByModuleID('{0e690030-89e5-11ec-a8a3-0242ac120002}'); //MQTTBridgeClientDevice
         foreach ($InstanceIDs as $id) {
             if (IPS_GetProperty($id, 'MQTTTopic') == $Topic) {
                 if (IPS_GetInstance($id)['ConnectionID'] == IPS_GetInstance($this->InstanceID)['ConnectionID']) {

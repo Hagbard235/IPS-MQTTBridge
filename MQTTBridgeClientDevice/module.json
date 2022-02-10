@@ -1,11 +1,11 @@
 {
-	"id": "{F6B7EB9F-7624-1026-44C1-9AF4059C26ED}",
-	"name": "MQTTSyncClientDevice",
+	"id": "{0e690030-89e5-11ec-a8a3-0242ac120002}",
+	"name": "MQTTBridgeClientDevice",
 	"type": 3,
 	"vendor": "",
-	"aliases": ["MQTT Sync Client Device"],
+	"aliases": ["MQTT BRidge Client Device"],
 	"parentRequirements": ["{043EA491-0325-4ADD-8FC2-A30C8EEB4D3F}"],
 	"childRequirements": [],
 	"implemented": ["{7F7632D9-FA40-4F38-8DEA-C83CD4325A32}"],
-	"prefix": "MQTTSYNC"
+	"prefix": "MQTTBRIDGE"
 }

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-class MQTTSyncClientDevice extends IPSModule
+class MQTTBridgeClientDevice extends IPSModule
 {
     public function Create()
     {
