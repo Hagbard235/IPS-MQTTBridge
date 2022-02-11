@@ -21,11 +21,11 @@ class MQTTBridgeClientDevice extends IPSModule
 
         $GroupTopic = $this->ReadPropertyString('GroupTopic');
         $MQTTTopic = $this->ReadPropertyString('MQTTTopic');
-        $this->SetReceiveDataFilter('.*mqttsync/' . $GroupTopic . '/' . $MQTTTopic . '".*');
+        $this->SetReceiveDataFilter('.*mqttbridge/' . $GroupTopic . '/' . $MQTTTopic . '".*');
 
         $Payload = [];
         $Payload['config'] = 'variables';
-        $Topic = 'mqttsync/' . $this->ReadPropertyString('GroupTopic') . '/' . $this->ReadPropertyString('MQTTTopic') . '/get';
+        $Topic = 'mqttbridge/' . $this->ReadPropertyString('GroupTopic') . '/' . $this->ReadPropertyString('MQTTTopic') . '/get';
         if ($this->HasActiveParent()) {
             $this->sendMQTTCommand($Topic, $Payload);
         }
@@ -66,7 +66,7 @@ class MQTTBridgeClientDevice extends IPSModule
                             $this->RegisterVariableString($ObjectIdent, $Variable->Name, $VariableProfile);
                             break;
                         default:
-                            IPS_LogMessage('MQTTSync Client', 'invalid variablen profile');
+                            IPS_LogMessage('MQTTBridge Client', 'invalid variablen profile');
                             break;
                     }
                     if ($Variable->VariableAction != 0 || $Variable->VariableCustomAction != 0) {
@@ -84,7 +84,7 @@ class MQTTBridgeClientDevice extends IPSModule
         $Payload = [];
         $Payload['ObjectIdent'] = $Ident;
         $Payload['Value'] = $Value;
-        $Topic = 'mqttsync/' . $this->ReadPropertyString('GroupTopic') . '/' . $this->ReadPropertyString('MQTTTopic') . '/set';
+        $Topic = 'mqttbridge/' . $this->ReadPropertyString('GroupTopic') . '/' . $this->ReadPropertyString('MQTTTopic') . '/set';
         $this->sendMQTTCommand($Topic, $Payload);
     }
 

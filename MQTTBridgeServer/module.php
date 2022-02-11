@@ -9,7 +9,7 @@ class MQTTBridgeServer extends IPSModule
         //Never delete this line!
         parent::Create();
         $this->ConnectParent('{C6D2AEB3-6E1F-4B2E-8E69-3A1A00246850}');
-        $this->RegisterPropertyString('GroupTopic', IPS_GetObject(0)['ObjectName']);
+        $this->RegisterPropertyString('GroupTopic', 'MQTTBridge');
         $this->RegisterPropertyBoolean('Retain', false);
         $this->RegisterPropertyString('Devices', '[]');
     }
@@ -21,7 +21,7 @@ class MQTTBridgeServer extends IPSModule
         $this->ConnectParent('{C6D2AEB3-6E1F-4B2E-8E69-3A1A00246850}');
 
         $MQTTTopic = $this->ReadPropertyString('GroupTopic');
-        $this->SetReceiveDataFilter('.*mqttsync/' . $MQTTTopic . '.*');
+        $this->SetReceiveDataFilter('.*mqttbridge/' . $MQTTTopic . '.*');
 
         $activeMessages = [];
 
@@ -343,7 +343,7 @@ class MQTTBridgeServer extends IPSModule
         $Data['PacketType'] = 3;
         $Data['QualityOfService'] = 0;
         $Data['Retain'] = $this->ReadPropertyBoolean('Retain');
-        $Data['Topic'] = 'mqttsync/' . $GroupTopic . '/' . $topic;
+        $Data['Topic'] = 'mqttbridge/' . $GroupTopic . '/' . $topic;
         $Data['Payload'] = $payload;
 
         $DataJSON = json_encode($Data, JSON_UNESCAPED_SLASHES);
