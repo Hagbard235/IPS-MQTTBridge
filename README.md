@@ -17,12 +17,12 @@
 
 
 ## 2. Installation
-Über den IP-Symcon Module Store.
+vorerst manuell aus Github über diei Module-Instanz
 
 ## 3. Konfiguration in IP-Symcon
 
-1. MQTTSyncServer auf Master IPS anlegen
-2. MQTTSyncClientConfigurator auf Slave IPS installieren.
+1. MQTTBridgeServer auf Master IPS anlegen
+Optional 2. MQTTBridgeClientConfigurator auf Slave IPS installieren.
 
 Die Doku kann den einzelnen Instanzen entnommen werden.
 

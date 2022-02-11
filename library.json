@@ -1,9 +1,9 @@
 {
-	"id": "{FF8F1A8E-73A7-C090-ABA6-F8EBC927BB30}",
-	"author": "Kai Schnittcher",
-	"name": "MQTTSync",
-	"url": "https://github.com/Schnittcher/IPS-MQTTSync",
-	"version": "1.1",
+	"id": "{274f4128-8b06-11ec-a8a3-0242ac120002}",
+	"author": "Andre Schmidtr",
+	"name": "MQTTBridge",
+	"url": "https://github.com/Hagbard235/IPS-MQTTBridge",
+	"version": "0.1",
 	"build": 0,
 	"date": 0
 }
