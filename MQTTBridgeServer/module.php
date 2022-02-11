@@ -70,7 +70,7 @@ class MQTTBridgeServer extends IPSModule
                     $Topic = '';
                     $Instanz = null;
                     $Object = IPS_GetObject($SenderID);
-                    IPS_LogMessage('MQTTBridge Server', $Data);
+                    IPS_LogMessage('MQTTBridge Server', implode($Data));
 
                     if ($this->isInstance($SenderID)) {
                         $Topic = $this->TopicFromList($Object['ParentID']);
