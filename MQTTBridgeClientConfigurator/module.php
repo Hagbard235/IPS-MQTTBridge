@@ -97,7 +97,7 @@ class MQTTBridgeClientConfigurator extends IPSModule
 
     private function getMQTTBridgeClientDeviceInstance($Topic)
     {
-        $InstanceIDs = IPS_GetInstanceListByModuleID('{0e690030-89e5-11ec-a8a3-0242ac120002}'); //MQTTBridgeClientDevice
+        $InstanceIDs = IPS_GetInstanceListByModuleID('{98BA2EDD-B52B-BAF2-6750-94FA9092B063}'); //MQTTBridgeClientDevice
         foreach ($InstanceIDs as $id) {
             if (IPS_GetProperty($id, 'MQTTTopic') == $Topic) {
                 if (IPS_GetInstance($id)['ConnectionID'] == IPS_GetInstance($this->InstanceID)['ConnectionID']) {
