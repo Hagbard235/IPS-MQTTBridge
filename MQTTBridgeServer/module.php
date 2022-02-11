@@ -9,7 +9,7 @@ class MQTTBridgeServer extends IPSModule
         //Never delete this line!
         parent::Create();
         $this->ConnectParent('{C6D2AEB3-6E1F-4B2E-8E69-3A1A00246850}');
-        $this->RegisterPropertyString('GroupTopic', 'MQTTBridge');
+        $this->RegisterPropertyString('GroupTopic', IPS_GetObject(0)['Objectname']);
         $this->RegisterPropertyBoolean('Retain', false);
         $this->RegisterPropertyString('Devices', '[]');
     }
@@ -70,6 +70,7 @@ class MQTTBridgeServer extends IPSModule
                     $Topic = '';
                     $Instanz = null;
                     $Object = IPS_GetObject($SenderID);
+                    IPS_LogMessage('MQTTBridge Server', $Data);
 
                     if ($this->isInstance($SenderID)) {
                         $Topic = $this->TopicFromList($Object['ParentID']);
