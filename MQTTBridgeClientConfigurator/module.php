@@ -35,7 +35,7 @@ class MQTTBridgeClientConfigurator extends IPSModule
 
             ];
             $tmpDevice['create'] = [
-                'moduleID'      => '{F6B7EB9F-7624-1026-44C1-9AF4059C26ED}',
+                'moduleID'      => '{98BA2EDD-B52B-BAF2-6750-94FA9092B063}',
                 'configuration' => [
                     'GroupTopic'   => $this->ReadPropertyString('GroupTopic'),
                     'MQTTTopic'    => $Device->MQTTTopic,
