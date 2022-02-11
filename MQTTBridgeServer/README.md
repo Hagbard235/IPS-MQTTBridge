@@ -1,4 +1,4 @@
-# MQTTSyncServer
+# MQTTBridgeServer
    Dieses Modul wird dazu benötigt, um auf dem Client System die Instanzen anzulegen, welche die Werte des Master Systems auf dem Slave System widerspiegeln.
 
    ## Inhaltverzeichnis

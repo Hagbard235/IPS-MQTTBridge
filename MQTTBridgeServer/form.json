@@ -38,7 +38,7 @@
     [
       { "type": "Button",
         "caption": "Synchronize data",
-        "onClick": "MQTTSync_synchronizeData($id);"
+        "onClick": "MQTTBridge_synchronizeData($id);"
       },
       {
         "type": "ExpansionPanel",
@@ -46,15 +46,15 @@
         "items": [
             { "type": "Button",
               "caption": "Send Configuration to Client",
-              "onClick": "MQTTSync_sendConfiguration($id);"
+              "onClick": "MQTTBridge_sendConfiguration($id);"
             },
             { "type": "Button",
               "caption": "Send Variablen Profiles to Client",
-              "onClick": "MQTTSync_sendVariablenProfiles($id);"
+              "onClick": "MQTTBridge_sendVariablenProfiles($id);"
             },
             { "type": "Button",
               "caption": "Send Variables to Client",
-              "onClick": "MQTTSync_sendVariablen($id);"
+              "onClick": "MQTTBridge_sendVariablen($id);"
             }
         ]
     }
